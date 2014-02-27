@@ -1,10 +1,12 @@
 package binTree;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class BTree<T extends Comparable<T>> implements IBTree<T>{
 	private final T value;
 	private IBTree<T> left;
 	private IBTree<T> right;
-	private int counter = 1;
+	private AtomicInteger counter = new AtomicInteger(1);
 	/**
 	 * @param value
 	 * @param left
@@ -43,12 +45,12 @@ public class BTree<T extends Comparable<T>> implements IBTree<T>{
 	 */
 	@Override
 	public int getCounter() {
-		return counter;
+		return counter.get();
 	}
 	@Override
 	public void add(T value) {
 		if(getValue().equals(value)){
-			counter++;
+			counter.incrementAndGet();
 		}else{
 			if(getValue().compareTo(value)<0){
 				addRight(value);
