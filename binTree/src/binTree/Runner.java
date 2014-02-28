@@ -3,6 +3,8 @@ package binTree;
 import java.util.Collections;
 import java.util.LinkedList;
 
+import binTree.IBTree.IProcess;
+
 public class Runner {
 
 	public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class Runner {
 			}.start();
 			
 		}
-		binTree.IBTree.Process<Integer> pr = new ShowValue<Integer>();
+		IProcess<Integer> pr = new ShowValue<Integer>();
 		bTree.forEach(pr);
 	}
 }

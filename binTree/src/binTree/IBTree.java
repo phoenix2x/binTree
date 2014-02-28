@@ -9,8 +9,8 @@ public interface IBTree<T extends Comparable<T>> {
 	public T getValue() ;
 	public int getCounter();
 	public void add(T value);
-	public void forEach(Process<T> process);
-	public interface Process<T>{
+	public void forEach(IProcess<T> process);
+	public interface IProcess<T>{
 		public void process(T value);
 	}
 

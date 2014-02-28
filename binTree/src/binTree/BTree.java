@@ -82,7 +82,7 @@ public class BTree<T extends Comparable<T>> implements IBTree<T>{
 		this.right = right;
 	}
 	@Override
-	public void forEach(final Process<T> process) {
+	public void forEach(final IProcess<T> process) {
 		new Thread(){
 
 			/* (non-Javadoc)

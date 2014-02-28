@@ -1,8 +1,8 @@
 package binTree;
 
-import binTree.IBTree.Process;
+import binTree.IBTree.IProcess;
 
-public class ShowValue<T extends Comparable<T>> implements Process<T> {
+public class ShowValue<T extends Comparable<T>> implements IProcess<T> {
 
 	@Override
 	public void process(T value) {
