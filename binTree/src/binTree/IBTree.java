@@ -2,16 +2,21 @@ package binTree;
 
 public interface IBTree<T extends Comparable<T>> {
 
-	public IBTree<T> getLeft() ;
+	IBTree<T> getLeft() ;
 
-	public IBTree<T> getRight() ;
+	IBTree<T> getRight() ;
 
-	public T getValue() ;
-	public int getCounter();
-	public void add(T value);
-	public void forEach(IProcess<T> process);
-	public interface IProcess<T>{
+	T getValue() ;
+	
+	int getCounter();
+	
+	void add(T value);
+	
+	void forEach(IProcess<T> process);
+	void forEachFJ(IProcess<T> process);
+	IBTree<T> find(T value);
+	
+	interface IProcess<T>{
 		public void process(T value);
 	}
-
 }
